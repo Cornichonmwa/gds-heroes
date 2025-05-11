@@ -50,8 +50,8 @@ services:
     ## Storage Folders: "~" is a shortcut for your home directory, "." for the current directory
     volumes:
       - "/mnt/gds-photos:/photoprism/originals/" # *Additional* media folders can be mounted like this
-      #- "/srv/appdata/photoprism/Import:/photoprism/import"                  # *Optional* base folder from which files can be imported to originals
-      #- "/srv/appdata/photoprism/storage:/photoprism/storage"                  # *Writable* storage folder for cache, database, and sidecar files (DO NOT REMOVE)
+      - "/opt/photoprism/import:/photoprism/import"                  # *Optional* base folder from which files can be imported to originals
+      - "/opt/photoprism/storage:/photoprism/storage"                  # *Writable* storage folder for cache, database, and sidecar files (DO NOT REMOVE)
 
   mariadb:
     image: mariadb:11
